@@ -20,8 +20,7 @@ load_dotenv()
 
 # Dicionário de usuários e senhas
 USERS = {
-    'admin': '@Transben1',
-    'usuario': '@Transben1'
+    'admin': '123'
 }
 
 def check_auth(username, password):

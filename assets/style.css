@@ -1,0 +1,749 @@
+/* ===== RESPONSIVE DESIGN - MOBILE FIRST ===== */
+
+/* Base styles for all devices */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ===== MOBILE STYLES (max-width: 768px) ===== */
+@media (max-width: 768px) {
+    /* Hide parameters section on mobile */
+    #parameters-section {
+        display: none !important;
+    }
+    
+    .mobile-info {
+        display: block !important;
+        background-color: #1F2937;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #374151;
+        text-align: center;
+        color: #E5E7EB;
+    }
+
+    /* Main container adjustments */
+    .dash-container {
+        padding: 10px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Tab styling for mobile */
+    .dash-tab {
+        padding: 8px 12px !important;
+        font-size: 14px !important;
+        min-height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* KPI cards - single column on mobile */
+    .kpi-row {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .kpi-card {
+        padding: 15px !important;
+        border-radius: 8px !important;
+        text-align: center !important;
+        min-height: 80px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .kpi-card h3 {
+        font-size: 14px !important;
+        margin: 0 0 5px 0 !important;
+        color: #9CA3AF !important;
+    }
+
+    .kpi-card p {
+        font-size: 24px !important;
+        margin: 0 !important;
+        font-weight: bold !important;
+    }
+
+    /* Charts - full width on mobile */
+    .dash-graph {
+        width: 100% !important;
+        height: 350px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Chart grid - single column */
+    .chart-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Full width chart containers */
+    .chart-container-full {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .chart-container-full .dash-graph {
+        height: 350px !important;
+        width: 100% !important;
+    }
+
+    /* Tables - mobile optimized with horizontal scroll */
+    .dash-table {
+        font-size: 12px !important;
+        overflow-x: auto !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Table container with horizontal scroll */
+    .table-container {
+        overflow-x: auto !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    /* Table cells - compact on mobile */
+    .dash-table .dash-cell {
+        padding: 6px 4px !important;
+        min-width: 60px !important;
+        max-width: 100px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        font-size: 11px !important;
+    }
+
+    .dash-table .dash-header {
+        padding: 8px 4px !important;
+        font-size: 10px !important;
+        font-weight: bold !important;
+        min-width: 60px !important;
+        max-width: 100px !important;
+    }
+
+    /* Pagination controls - mobile optimized */
+    .dash-table .dash-paging-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: center !important;
+        padding: 10px 0 !important;
+        font-size: 12px !important;
+    }
+
+    .dash-table .dash-paging-container .dash-paging-button {
+        padding: 8px 12px !important;
+        margin: 0 2px !important;
+        font-size: 12px !important;
+        min-width: 40px !important;
+    }
+
+    .dash-table .dash-paging-container .dash-paging-info {
+        font-size: 11px !important;
+        margin: 5px 0 !important;
+    }
+
+    /* Filter controls - stacked vertically */
+    .filter-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .filter-container .dash-dropdown,
+    .filter-container .dash-input {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Buttons - full width on mobile */
+    .dash-button {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 16px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Upload area - mobile optimized */
+    .dash-upload {
+        height: 120px !important;
+        line-height: 120px !important;
+        font-size: 14px !important;
+    }
+
+    /* Cards - full width padding */
+    .card-container {
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+    }
+
+    /* Individual dashboard adjustments */
+    .individual-dashboard {
+        padding: 10px !important;
+    }
+
+    .individual-kpis {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .individual-kpis .kpi-card {
+        padding: 10px !important;
+        min-height: 60px !important;
+    }
+
+    .individual-kpis h4 {
+        font-size: 12px !important;
+        margin: 0 0 3px 0 !important;
+    }
+
+    .individual-kpis p {
+        font-size: 18px !important;
+        margin: 0 !important;
+    }
+
+    /* Violation list - mobile optimized */
+    .violation-list {
+        max-height: 300px !important;
+        overflow-y: auto !important;
+        padding: 10px !important;
+    }
+
+    .violation-item {
+        padding: 8px !important;
+        margin-bottom: 8px !important;
+        border-radius: 6px !important;
+        font-size: 13px !important;
+    }
+
+    .violation-item p {
+        margin: 3px 0 !important;
+    }
+
+    /* AI section - mobile optimized */
+    .ai-section {
+        padding: 15px !important;
+    }
+
+    .ai-section textarea {
+        height: 200px !important;
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+
+    /* Loading indicators */
+    .dash-loading {
+        padding: 20px !important;
+        text-align: center !important;
+    }
+
+    /* Navigation buttons */
+    .nav-button {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        padding: 12px !important;
+        font-size: 16px !important;
+    }
+
+    /* Table specific mobile fixes */
+    .dash-table-container {
+        overflow-x: auto !important;
+        max-width: 100vw !important;
+        margin: 0 -10px !important;
+        padding: 0 10px !important;
+    }
+
+    /* Ensure table doesn't break layout */
+    .dash-table table {
+        min-width: 600px !important;
+        width: 100% !important;
+    }
+
+    /* Dashboard carousel styles for category tabs */
+    .dashboard-carousel .dashboard-content {
+        padding: 15px !important;
+        margin: 8px 0 !important;
+    }
+
+    .dashboard-carousel .dashboard-content h4 {
+        font-size: 1.1em !important;
+    }
+
+    .dashboard-carousel .dashboard-content p {
+        font-size: 0.85em !important;
+    }
+
+    .dashboard-carousel .dash-graph {
+        height: 300px !important;
+    }
+
+    /* Category tabs specific styles */
+    #categoria-motorista-tabs .dash-tab,
+    #categoria-veiculo-tabs .dash-tab {
+        padding: 10px 12px !important;
+        margin: 0 4px !important;
+        font-size: 13px !important;
+        min-width: 140px !important;
+    }
+
+    .upload-section {
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .upload-section h2 {
+        font-size: 1.8em !important;
+    }
+    
+    .upload-section p {
+        font-size: 1em !important;
+    }
+    
+    .dash-upload {
+        height: 100px !important;
+        line-height: 100px !important;
+    }
+    
+    .nav-button {
+        padding: 10px 20px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* ===== TABLET STYLES (768px - 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mobile-info {
+        display: none !important;
+    }
+
+    /* KPI cards - 2 columns on tablet */
+    .kpi-row {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* Chart grid - 2 columns */
+    .chart-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 25px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* Filter controls - horizontal with wrapping */
+    .filter-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+        margin-bottom: 25px !important;
+        align-items: center !important;
+    }
+
+    .filter-container .dash-dropdown {
+        min-width: 200px !important;
+        flex: 1 !important;
+    }
+
+    .filter-container .dash-input {
+        min-width: 250px !important;
+        flex: 1 !important;
+    }
+
+    /* Individual KPIs - 3 columns */
+    .individual-kpis {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Table improvements for tablet */
+    .dash-table {
+        font-size: 13px !important;
+    }
+
+    .dash-table .dash-cell {
+        padding: 8px 6px !important;
+        min-width: 80px !important;
+        max-width: 150px !important;
+    }
+
+    .dash-table .dash-header {
+        padding: 10px 6px !important;
+        font-size: 12px !important;
+    }
+
+    /* Full width chart containers for tablet */
+    .chart-container-full {
+        width: 100% !important;
+        margin-bottom: 25px !important;
+    }
+
+    .chart-container-full .dash-graph {
+        height: 400px !important;
+        width: 100% !important;
+    }
+}
+
+/* ===== DESKTOP STYLES (min-width: 1025px) ===== */
+@media (min-width: 1025px) {
+    .mobile-info {
+        display: none !important;
+    }
+
+    /* KPI cards - 3+ columns on desktop */
+    .kpi-row {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        gap: 25px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Chart grid - 2 columns */
+    .chart-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 30px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Filter controls - horizontal layout */
+    .filter-container {
+        display: flex !important;
+        gap: 20px !important;
+        margin-bottom: 30px !important;
+        align-items: center !important;
+    }
+
+    .filter-container .dash-dropdown {
+        width: 300px !important;
+    }
+
+    .filter-container .dash-input {
+        width: 300px !important;
+    }
+
+    /* Individual KPIs - 6 columns */
+    .individual-kpis {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 20px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* Table improvements for desktop */
+    .dash-table {
+        font-size: 14px !important;
+    }
+
+    .dash-table .dash-cell {
+        padding: 10px 8px !important;
+        min-width: 100px !important;
+        max-width: 200px !important;
+    }
+
+    .dash-table .dash-header {
+        padding: 12px 8px !important;
+        font-size: 13px !important;
+    }
+
+    /* Full width chart containers for desktop */
+    .chart-container-full {
+        width: 100% !important;
+        margin-bottom: 25px !important;
+    }
+
+    .chart-container-full .dash-graph {
+        height: 400px !important;
+        width: 100% !important;
+    }
+}
+
+/* ===== COMMON STYLES FOR ALL DEVICES ===== */
+
+/* Smooth transitions */
+.dash-container,
+.kpi-card,
+.card-container,
+.dash-button,
+.dash-dropdown,
+.dash-input {
+    transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.dash-button:focus,
+.dash-dropdown:focus,
+.dash-input:focus {
+    outline: 2px solid #3B82F6;
+    outline-offset: 2px;
+}
+
+/* Hover effects */
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dash-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading states */
+.dash-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Table improvements */
+.dash-table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #374151;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6B7280;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+/* Print styles */
+@media print {
+    .dash-tab,
+    .dash-button,
+    .filter-container {
+        display: none !important;
+    }
+    
+    .kpi-row {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .chart-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* Dashboard carousel styles */
+.dashboard-carousel {
+    background-color: #1F2937 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.dashboard-carousel h3 {
+    color: #E5E7EB !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    font-size: 1.5em !important;
+}
+
+.dashboard-carousel .dash-tab {
+    background-color: #374151 !important;
+    color: #9CA3AF !important;
+    border: 1px solid #4B5563 !important;
+    border-radius: 6px !important;
+    padding: 10px 15px !important;
+    margin: 0 5px !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease !important;
+}
+
+.dashboard-carousel .dash-tab:hover {
+    background-color: #4B5563 !important;
+    color: #E5E7EB !important;
+}
+
+.dashboard-carousel .dash-tab--selected {
+    background-color: #3B82F6 !important;
+    color: white !important;
+    border-color: #3B82F6 !important;
+    font-weight: bold !important;
+}
+
+.dashboard-content {
+    padding: 20px 0 !important;
+}
+
+.dashboard-content h4 {
+    color: #E5E7EB !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    font-size: 1.3em !important;
+}
+
+.dashboard-content p {
+    color: #9CA3AF !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    line-height: 1.5 !important;
+    font-size: 14px !important;
+}
+
+/* Dashboard carousel styles for category tabs */
+.dashboard-carousel h3 {
+    color: #E5E7EB !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    font-size: 1.5em !important;
+}
+
+.dashboard-carousel .dashboard-content {
+    padding: 20px !important;
+    background-color: #374151 !important;
+    border-radius: 8px !important;
+    margin: 10px 0 !important;
+}
+
+.dashboard-carousel .dashboard-content h4 {
+    color: #E5E7EB !important;
+    margin-bottom: 10px !important;
+    font-size: 1.2em !important;
+    text-align: center !important;
+}
+
+.dashboard-carousel .dashboard-content p {
+    color: #9CA3AF !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+    font-size: 0.9em !important;
+    line-height: 1.4 !important;
+}
+
+.dashboard-carousel .dash-graph {
+    height: 400px !important;
+    width: 100% !important;
+}
+
+/* Category tabs specific styles */
+#categoria-motorista-tabs .dash-tab,
+#categoria-veiculo-tabs .dash-tab {
+    background-color: #374151 !important;
+    color: #9CA3AF !important;
+    border: 1px solid #4B5563 !important;
+    border-radius: 6px !important;
+    padding: 12px 18px !important;
+    margin: 0 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    min-width: 180px !important;
+    text-align: center !important;
+}
+
+#categoria-motorista-tabs .dash-tab--selected,
+#categoria-veiculo-tabs .dash-tab--selected {
+    background-color: #3B82F6 !important;
+    color: white !important;
+    border-color: #3B82F6 !important;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3) !important;
+}
+
+#categoria-motorista-tabs .dash-tab:hover,
+#categoria-veiculo-tabs .dash-tab:hover {
+    background-color: #4B5563 !important;
+    color: #E5E7EB !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ===== UPLOAD SECTION STYLES ===== */
+
+.upload-section {
+    background: linear-gradient(135deg, #1F2937 0%, #374151 100%) !important;
+    border: 1px solid #4B5563 !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.upload-section:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Upload area hover effects */
+.dash-upload:hover {
+    border-color: #F59E0B !important;
+    background-color: #374151 !important;
+    transform: scale(1.02) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Back button hover effects */
+.nav-button:hover {
+    background-color: #2563EB !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
+}
+
+.nav-button:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Upload info section */
+.upload-section ul {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.upload-section ul li {
+    position: relative !important;
+    padding-left: 20px !important;
+    margin-bottom: 8px !important;
+}
+
+.upload-section ul li:before {
+    content: "✓" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: #10B981 !important;
+    font-weight: bold !important;
+} 

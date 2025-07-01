@@ -1,0 +1,7 @@
+dash[all]
+pandas
+plotly
+requests
+markdown
+gunicorn
+python-dotenv
